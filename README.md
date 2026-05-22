@@ -35,3 +35,9 @@ cmake --build omnitrace-build --target all --parallel 8
 cmake --build omnitrace-build --target install
 source /opt/omnitrace/share/omnitrace/setup-env.sh
 ```
+
+
+  cmake -B omnitrace-build -DCMAKE_INSTALL_PREFIX=/opt/omnitrace  -DOMNITRACE_BUILD_DYNINST=ON -DDYNINST_BUILD_{TBB,ELFUTILS,BOOST,LIBIBERTY}=ON omnitrace-source
+  cmake --build omnitrace-build --target all
+cmake --build omnitrace-build --target install
+  
